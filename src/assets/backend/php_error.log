@@ -1,0 +1,70 @@
+[27-May-2025 06:48:10 UTC] --------------------------------------------------
+[27-May-2025 06:48:10 UTC] upload_oos.php accessed. Time: 2025-05-27 06:48:10
+[27-May-2025 06:48:10 UTC] REQUEST_METHOD: POST
+[27-May-2025 06:48:10 UTC] FILES array: Array
+(
+    [oos_file] => Array
+        (
+            [name] => CMO.xlsx
+            [full_path] => CMO.xlsx
+            [type] => application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+            [tmp_name] => C:\Users\KHUSNAN\AppData\Local\Temp\php14A5.tmp
+            [error] => 0
+            [size] => 1209154
+        )
+
+)
+
+[27-May-2025 06:48:10 UTC] POST array: Array
+(
+)
+
+[27-May-2025 06:48:10 UTC] File uploaded: CMO.xlsx (Temp path: C:\Users\KHUSNAN\AppData\Local\Temp\php14A5.tmp)
+[27-May-2025 06:48:10 UTC] Attempting to load spreadsheet: C:\Users\KHUSNAN\AppData\Local\Temp\php14A5.tmp
+[27-May-2025 06:48:30 UTC] Spreadsheet loaded successfully.
+[27-May-2025 06:48:32 UTC] Sheet data extracted. Total rows: 23453
+[27-May-2025 06:48:32 UTC] Expected columns defined: Urutan, Batch, PULAU, Region SCM, CUST#, DEPO, SKU, PARENT SKU, ITEM, Original OOS, STATUS DOI, Req QTY Kirim
+[27-May-2025 06:48:32 UTC] Raw Excel Headers (from first row): Array
+(
+    [A] => CUST#
+    [B] => CUSTOMER - CITY/CHANNEL
+    [C] => SKU 
+    [D] => MATERIAL DESCRIPTION 
+    [E] => VOLUME
+    [F] => CHANNEL
+    [G] => OTD CMO
+    [H] =>   CMO FINAL
+    [I] => ACTUAL
+    [J] => DO PLANNING
+)
+
+[27-May-2025 06:48:32 UTC] Excel Headers (array_values): Array
+(
+    [0] => CUST#
+    [1] => CUSTOMER - CITY/CHANNEL
+    [2] => SKU 
+    [3] => MATERIAL DESCRIPTION 
+    [4] => VOLUME
+    [5] => CHANNEL
+    [6] => OTD CMO
+    [7] =>   CMO FINAL
+    [8] => ACTUAL
+    [9] => DO PLANNING
+)
+
+[27-May-2025 06:48:32 UTC] Excel Headers (lowercase & trimmed): Array
+(
+    [0] => cust#
+    [1] => customer - city/channel
+    [2] => sku
+    [3] => material description
+    [4] => volume
+    [5] => channel
+    [6] => otd cmo
+    [7] => cmo final
+    [8] => actual
+    [9] => do planning
+)
+
+[27-May-2025 06:48:32 UTC] Searching for expected column (lowercase): 'urutan'
+[27-May-2025 06:48:32 UTC] ERROR: Expected column 'Urutan' (lowercase: 'urutan') NOT found in Excel headers.

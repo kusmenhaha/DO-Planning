@@ -1,0 +1,118 @@
+/* Custom styles for Stock form and grid */
+#stockGrid {
+    margin-top: 20px;
+}
+
+.gridjs-head {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.gridjs-th {
+    font-weight: bold;
+    padding: 12px 10px;
+    position: relative !important; /* Tambahkan !important */
+    white-space: nowrap;
+    /* Tambahan untuk memastikan header memiliki min-width yang layak */
+    min-width: 80px;
+}
+
+/* Styling untuk filter input di header */
+.gridjs-th .filter-input {
+    width: calc(100% - 10px); /* Sesuaikan lebar */
+    margin-top: 5px;
+    padding: 4px 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.85em; /* Ukuran font lebih kecil agar pas */
+}
+
+
+/* Gaya tabel dasar */
+.gridjs-td {
+    padding: 2px; /* Lebih kecil agar input pas di dalam sel */
+    vertical-align: middle; /* Pusatkan vertikal */
+}
+
+/* Tambahan untuk Material Description agar teks bisa wrap */
+.gridjs-td[data-column-id="Material Description"] {
+    white-space: normal !important; /* Gunakan !important untuk memastikan override */
+    word-break: break-word !important; /* Gunakan !important untuk memastikan override */
+}
+
+.gridjs-td .qty-input {
+    width: 100%; /* Agar input mengisi seluruh sel */
+    height: 100%; /* Input mengisi tinggi sel */
+    padding: 5px; /* Padding di dalam input */
+    margin: 0;
+    border: 1px solid #ced4da;
+    box-sizing: border-box; /* Pastikan padding dan border masuk dalam width */
+    text-align: right; /* Sesuaikan dengan format angka */
+    font-size: inherit; /* Ikuti ukuran font sel */
+    font-family: inherit; /* Ikuti font family sel */
+    outline: none; /* Hilangkan outline default browser saat focus */
+}
+
+/* Gaya khusus saat input field di-focus */
+.gridjs-td .qty-input:focus {
+    border-color: #007bff; /* Blue border saat fokus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Efek shadow ringan */
+}
+
+
+.gridjs-footer {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Gaya tombol */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* --- LOADING ANIMATION STYLING --- */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Latar belakang semi-transparan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Pastikan di atas semua elemen */
+    font-size: 1.5em;
+    color: #333;
+    flex-direction: column; /* Untuk menumpuk spinner dan teks */
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #007bff; /* Warna spinner */
+    animation: spin 1s ease infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* stock.css (tambahan opsional jika ingin styling khusus untuk dropdown filter) */
+
+.gridjs-th .filter-select { /* Anda bisa tambahkan kelas ini di JS, atau pakai .gridjs-th select */
+    width: auto;
+    min-width: 120px;
+    background-color: #e9ecef;
+}

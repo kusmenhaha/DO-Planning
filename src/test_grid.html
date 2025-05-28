@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Grid.js Editable</title>
+    <link rel="stylesheet" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" />
+    <style>
+        #myTestGrid {
+            margin: 50px;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Test Grid.js Editable Column</h1>
+
+    <div id="myTestGrid"></div>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM Content Loaded for test_grid.html");
+
+            const gridContainer = document.getElementById('myTestGrid');
+
+            const data = [
+                ["300076", "NABATI RICE 110g GT (24pcs)", "[01]GT", 269, 0, 269],
+                ["300079", "NABATI RICE 39g GT (60pcs)", "[01]GT", 332, 0, 332],
+                ["300097", "NABATI RICE 15g GT (10pc x 12bal)", "[01]GT", 17095, 0, 17095],
+            ];
+
+            new gridjs.Grid({
+                columns: [
+                    { id: 'SKU', name: 'SKU' },
+                    { id: 'Material Description', name: 'Material Description' },
+                    { id: 'CHANNEL', name: 'CHANNEL' },
+                    {
+                        id: 'QTY',
+                        name: 'QTY',
+                        editable: true,
+                        formatter: (cell) => parseFloat(cell).toLocaleString('id-ID')
+                    },
+                    { id: 'Planning', name: 'Planning' },
+                    { id: 'Sisa QTY', name: 'Sisa QTY' }
+                ],
+                data: data,
+                pagination: { enabled: true, limit: 5 },
+                sort: true,
+                resizable: true
+            }).render(gridContainer);
+
+            console.log("Grid.js rendered in test_grid.html");
+
+            // Tambahkan listener debugging untuk test page
+            gridContainer.addEventListener('click', (event) => {
+                if (event.target.closest('.gridjs-td')) {
+                    console.log("TEST PAGE: Clicked on a table cell. Text:", event.target.textContent);
+                }
+            });
+            gridContainer.addEventListener('dblclick', (event) => {
+                if (event.target.closest('.gridjs-td')) {
+                    console.log("TEST PAGE: Double-clicked on a table cell. Text:", event.target.textContent);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

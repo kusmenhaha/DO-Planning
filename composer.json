@@ -1,0 +1,12 @@
+{
+    "name": "khusnan/larkon",
+    "description": "test",
+    "autoload": {
+        "psr-4": {
+            "Khusnan\\Larkon\\": "src/"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^4.2"
+    }
+}

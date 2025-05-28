@@ -1,0 +1,75 @@
+/* ====== CONTAINER UTAMA ====== */
+#resultFixContainer {
+  padding: 30px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+/* ====== JUDUL HALAMAN ====== */
+h2.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ====== GRID TABLE ====== */
+.gridjs-container {
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+}
+
+.gridjs-head {
+  background-color: #f0f2f5;
+  font-weight: bold;
+}
+
+.gridjs-tr:hover {
+  background-color: #f7f7f7;
+}
+
+/* ====== PENCARIAN ====== */
+.gridjs-search {
+  margin-bottom: 15px;
+}
+
+.gridjs-input {
+  padding: 6px 12px;
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+}
+
+/* ====== PAGINATION ====== */
+.gridjs-pagination {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.gridjs-pagination button {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  margin: 0 3px;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.gridjs-pagination .gridjs-currentPage {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* ====== RESPONSIF ====== */
+@media (max-width: 768px) {
+  #resultFixContainer {
+    padding: 15px;
+  }
+
+  .gridjs-container {
+    font-size: 12px;
+  }
+}
